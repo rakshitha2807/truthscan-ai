@@ -1,0 +1,120 @@
+{
+    "project": "TruthScan AI",
+    "generated_at": "2026-11-11T22:30:05.150721",
+    "summary": {
+        "total_documents": 2,
+        "total_contradictions": 1,
+        "ocr_uncertain_documents": 1,
+        "status": "REVIEW_REQUIRED"
+    },
+    "documents": [
+        {
+            "file": "payment1.png",
+            "ocr_text": "PaymentSuccessful  1,50,000",
+            "ocr_confidence": 0.848,
+            "processed_text": "PaymentSuccessful 1,50,000",
+            "processed_confidence": 0.817,
+            "ocr_versions_agree": true,
+            "amount_disagreement": false,
+            "amount_review_required": false,
+            "amount_correction": null,
+            "fields": {
+                "amounts": [
+                    150000.0
+                ],
+                "dates": [],
+                "transaction_ids": [],
+                "statuses": [
+                    "success",
+                    "successful"
+                ]
+            },
+            "processed_fields": {
+                "amounts": [
+                    150000.0
+                ],
+                "dates": [],
+                "transaction_ids": [],
+                "statuses": [
+                    "success",
+                    "successful"
+                ]
+            }
+        },
+        {
+            "file": "payment2.png",
+            "ocr_text": "75,000 Completed 1Jun2024,11:50am",
+            "ocr_confidence": 0.806,
+            "processed_text": "75,000 Completed 1Jun2024,11:50am",
+            "processed_confidence": 0.829,
+            "ocr_versions_agree": true,
+            "amount_disagreement": false,
+            "amount_review_required": true,
+            "amount_correction": null,
+            "fields": {
+                "amounts": [
+                    75000.0
+                ],
+                "dates": [
+                    "1Jun2024"
+                ],
+                "transaction_ids": [],
+                "statuses": [
+                    "completed"
+                ]
+            },
+            "processed_fields": {
+                "amounts": [
+                    75000.0
+                ],
+                "dates": [
+                    "1Jun2024"
+                ],
+                "transaction_ids": [],
+                "statuses": [
+                    "completed"
+                ]
+            }
+        }
+    ],
+    "contradictions": [
+        {
+            "type": "AMOUNT_MISMATCH",
+            "field": "amount",
+            "file1": "payment1.png",
+            "file2": "payment2.png",
+            "value1": 150000.0,
+            "value2": 75000.0,
+            "message": "Different payment amounts were extracted."
+        }
+    ],
+    "evidence_graph": {
+        "nodes": [
+            {
+                "id": "doc_1",
+                "label": "payment1.png",
+                "type": "document"
+            },
+            {
+                "id": "doc_2",
+                "label": "payment2.png",
+                "type": "document"
+            },
+            {
+                "id": "issue_1",
+                "label": "AMOUNT_MISMATCH",
+                "type": "contradiction"
+            }
+        ],
+        "edges": [
+            {
+                "source": "doc_1",
+                "target": "issue_1"
+            },
+            {
+                "source": "doc_2",
+                "target": "issue_1"
+            }
+        ]
+    }
+}
