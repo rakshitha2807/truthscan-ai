@@ -1,0 +1,18 @@
+.neural-background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at 70% 38%,rgba(20,68,104,.2),transparent 38%),radial-gradient(ellipse at 87% 68%,rgba(77,47,133,.16),transparent 34%),#080c16}
+.neural-background canvas{display:block;width:100%;height:100%;pointer-events:none}
+.neural-background-static{background:radial-gradient(ellipse at 76% 34%,rgba(35,119,150,.19),transparent 36%),radial-gradient(ellipse at 85% 72%,rgba(91,65,161,.17),transparent 34%),#080c16}
+.app-shell{position:relative;z-index:1;background:transparent}
+.sidebar{background:rgba(10,15,26,.88);backdrop-filter:blur(16px)}
+.topbar{background:rgba(9,12,21,.58);backdrop-filter:blur(14px)}
+.stat-card,.content-card,.input-card,.result-panel,.verdict-card,.score-card,.summary-box,.analysis-note,.usage-card,.empty-state{background-color:rgba(15,21,34,.82);backdrop-filter:blur(12px)}
+.welcome-banner{background:linear-gradient(112deg,rgba(22,31,53,.94),rgba(17,26,48,.84) 57%,rgba(20,28,49,.68))}
+.system-status.unavailable i{background:#8992a6;box-shadow:none}
+.history-empty{padding:24px 12px;color:var(--muted);font-size:12px;text-align:center}
+.experiment-status{flex:none;color:#b9a4ff;font-size:10px;font-weight:600}
+.pulse-empty{min-height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);text-align:center}
+.pulse-empty svg{color:var(--cyan)}
+.pulse-empty strong{color:#dfe3ef;font-size:12px}
+.pulse-empty span{font-size:10px}
+.analysis-unavailable{margin-top:20px}
+.mobile-scrim{backdrop-filter:blur(3px)}
+@media(prefers-reduced-motion:reduce){.neural-background canvas{display:none}}

@@ -1,0 +1,17 @@
+.image-attachment{margin:0 0 12px}
+.image-attach-button{width:100%;min-height:48px;display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px dashed #a78bfa45;border-radius:8px;background:#a78bfa08;color:#bba9fa;text-align:left}
+.image-attach-button:hover{border-color:#a78bfa88;background:#a78bfa12}
+.image-attach-button:focus-visible,.image-remove:focus-visible{outline:2px solid #b49aff;outline-offset:2px}
+.image-attach-button span{font-size:10px;font-weight:600}
+.image-attach-button small{margin-left:auto;color:#778398;font-size:9px}
+.image-file-input{display:none}
+.image-preview{display:flex;align-items:center;gap:11px;padding:7px;border:1px solid #ffffff14;border-radius:8px;background:#0d111c}
+.image-preview img{width:44px;height:44px;border-radius:5px;object-fit:cover;background:#151a29}
+.image-details{min-width:0;flex:1}
+.image-details strong,.image-details small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.image-details strong{color:#dfe2ed;font-size:10px;font-weight:600}
+.image-details small{margin-top:4px;color:#778398;font-size:9px}
+.image-remove{width:30px;height:30px;display:grid;place-items:center;flex:none;border:0;border-radius:6px;background:transparent;color:#929bb0}
+.image-remove:hover{background:#ffffff0b;color:#f1d0d0}
+.image-error{display:block;margin:7px 2px 0;color:#f1a3a3;font-size:9px}
+@media(max-width:600px){.image-attach-button{flex-wrap:wrap}.image-attach-button small{width:100%;margin-left:25px}}
